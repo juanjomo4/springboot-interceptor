@@ -16,7 +16,19 @@ public class MvcConfig implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
+
+        // Interceptor para todos los endpoints
         registry.addInterceptor(timeInterceptor);
+
+        // Interceptor solo para los endpoints /app/bar y /app/foo
+        // registry.addInterceptor(timeInterceptor).addPathPatterns("/app/bar", "/app/foo");
+
+        // Interceptor para los endpoints /app/** (todos los endpoints que empiecen por /app/)
+        // registry.addInterceptor(timeInterceptor).addPathPatterns("/app/**);
+
+        // Interceptor para todos los endpoints excepto /app/foo
+        // registry.addInterceptor(timeInterceptor).excludePathPatterns("/app/foo");
+
     }
 
 }

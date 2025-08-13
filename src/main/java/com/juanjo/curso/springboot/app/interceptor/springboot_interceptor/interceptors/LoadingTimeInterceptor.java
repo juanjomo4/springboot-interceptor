@@ -1,6 +1,6 @@
 package com.juanjo.curso.springboot.app.interceptor.springboot_interceptor.interceptors;
 
-import java.util.Random;
+// import java.util.Random;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
