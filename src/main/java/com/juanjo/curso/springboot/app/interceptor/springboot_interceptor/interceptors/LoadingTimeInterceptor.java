@@ -1,7 +1,6 @@
 package com.juanjo.curso.springboot.app.interceptor.springboot_interceptor.interceptors;
 
 // import java.util.Random;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.lang.Nullable;
@@ -29,6 +28,10 @@ public class LoadingTimeInterceptor implements HandlerInterceptor {
         // Random random = new Random();
         // int delay = random.nextInt(500);
         // Thread.sleep(delay);
+
+        // Cambiadno a false evita que el controlador maneje la solicitud
+        // Se suele usar return false cuando por ejemplo se intenta hacer un login y el usuario no es válido
+        // return false; 
         return true;
     }
 
